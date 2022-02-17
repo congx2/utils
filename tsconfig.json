@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    // 指定ECMAScript目标版本
+    "target": "ES2016",
+    // 指定生成哪个模块系统代码
+    "module": "ES6",
+    // 决定如何处理模块
+    "moduleResolution": "classic",
+    // 启用所有严格类型检查选项
+    "strict": true,
+    // 在严格的 null检查模式下， null和 undefined值不包含在任何类型里，只允许用它们自己和 any来赋值（有个例外， undefined可以赋值到 void）
+    "strictNullChecks": true,
+    // 允许编译javascript文件
+    "allowJs": false,
+    // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
+    "allowSyntheticDefaultImports": false,
+    // 不报告执行不到的代码错误
+    "allowUnreachableCode": false,
+    // 不报告未使用的标签错误
+    "allowUnusedLabels": false,
+    // 以严格模式解析并为每个源文件生成 "use strict"语句
+    "alwaysStrict": true,
+    // 解析非相对模块名的基准目录
+    "baseUrl": ".",
+    // 文件的字符集
+    "charset": "utf8",
+    // 在 .js文件中报告错误, 与 --allowJs配合使用。
+    "checkJs": false,
+    // 支持JSX
+    "jsx": "React",
+    // 指定生成目标为react JSX时，使用的JSX工厂函数，比如 React.createElement或 h
+    "jsxFactory": "React.createElement",
+    // 指定行结束符
+    "newLine": "lf",
+    // 路径别名
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "included": [
+    "packages",
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

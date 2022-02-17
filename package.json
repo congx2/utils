@@ -1,0 +1,42 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congx2/utils.git"
+  },
+  "keywords": [
+    "utils",
+    "tools"
+  ],
+  "author": "congx2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/congx2/utils/issues"
+  },
+  "homepage": "https://github.com/congx2/utils#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.4",
+    "rollup": "^2.67.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  },
+  "lint-staged": {
+    "{src,packages}/**/*.{js,ts}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
