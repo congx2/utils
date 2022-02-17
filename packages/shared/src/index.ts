@@ -13,6 +13,21 @@ export const random = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+export const isNull = (value: unknown) => {
+  return value === null
+}
+
+export const isUndefined = (value: unknown) => {
+  return value === undefined
+}
+
+export const isNaN = (value: unknown) => {
+  if (typeof Number.isNaN === 'function') {
+    return Number.isNaN(value)
+  }
+  return typeof value === 'number' && value !== value
+}
+
 export const isNumber = (value: unknown) => {
   return typeof value === 'number'
 }
@@ -59,7 +74,6 @@ export const isPrimitive = (value: unknown) => {
   return typeof value !== 'object' && !isFunction(value)
 }
 
-
 export const isObject = (value: unknown) => {
   return !isPrimitive(value)
 }
@@ -68,3 +82,9 @@ export const isPlainObject = (value: unknown) => {
   return getStringTag(value) === 'Object'
 }
 
+export const isEmptyValue = (value: unknown) => {
+  if (isString(value)) {
+    return (value as string).trim().length === 0
+  }
+  return isNull(value) || isUndefined(value) || isNaN(value)
+}
